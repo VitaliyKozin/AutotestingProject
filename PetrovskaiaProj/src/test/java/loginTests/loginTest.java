@@ -12,7 +12,7 @@ public class loginTest extends Parenttest {
         loginPage.enterPass("909090");
         loginPage.clickOnSubmitButton();
         homePage.checkCurrentUrl();
-        checkAC("Avatar is not present",
+               checkAC("Avatar is not present",
                 homePage.isAvatarPresent(),
                 true);
     }
