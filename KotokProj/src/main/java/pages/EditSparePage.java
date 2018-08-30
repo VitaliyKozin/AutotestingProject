@@ -23,6 +23,7 @@ public class EditSparePage extends ParentPage {
     }
 
     public void clickButtonDelete() {
+
         actionsWithOurElements.clickOnElement(buttonDelete);
     }
 
@@ -31,6 +32,7 @@ public class EditSparePage extends ParentPage {
     }
 
     public void clickButtonCreate() {
+
         actionsWithOurElements.clickOnElement(buttonCreate);
     }
 
