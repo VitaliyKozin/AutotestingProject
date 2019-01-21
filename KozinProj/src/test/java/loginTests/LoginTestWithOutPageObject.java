@@ -25,7 +25,7 @@ public class LoginTestWithOutPageObject {
     public void validLogIn(){
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        webDriver.get("http://v3.test.itpmgroup.com");
+        webDriver.get("https://eap.gioc.kiev.ua");
 
         webDriver.findElement(By.name("_username")).clear();
         webDriver.findElement(By.name("_username")).sendKeys("Student");
