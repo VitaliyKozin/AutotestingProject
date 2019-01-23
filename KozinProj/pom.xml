@@ -7,11 +7,11 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>КozinProj</groupId>
-  <artifactId>КozinProj</artifactId>
+  <groupId>KozinProj</groupId>
+  <artifactId>KozinProj</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>КozinProj</name>
+  <name>KozinProj</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -185,13 +185,13 @@
         </plugin>
       </plugins>
     </pluginManagement>
-      <resources>
-          <resource>
-              <directory>src</directory>
-          </resource>
-          <resource>
-              <directory>src/main/java</directory>
-          </resource>
-      </resources>
+    <resources>
+      <resource>
+        <directory>src</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
+    </resources>
   </build>
 </project>
