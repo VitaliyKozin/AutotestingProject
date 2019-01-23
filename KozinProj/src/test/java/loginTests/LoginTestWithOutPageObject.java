@@ -27,13 +27,14 @@ public class LoginTestWithOutPageObject {
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         webDriver.get("https://eap.gioc.kiev.ua");
 
-        webDriver.findElement(By.name("_username")).clear();
-        webDriver.findElement(By.name("_username")).sendKeys("Student");
+        webDriver.findElement(By.name("login")).clear();
+        webDriver.findElement(By.name("login")).sendKeys("admin_test");
 
-        webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys("909090");
+        webDriver.findElement(By.name("password")).clear();
+        webDriver.findElement(By.name("password")).sendKeys("admin_test");
 
-        webDriver.findElement(By.tagName("button")).click();
+        webDriver.findElement(By.xpath(".//label")).click();
+        webDriver.findElement(By.xpath(".//button[@class='ant-btn sc-csuQGl bRwNtx ant-btn-primary']")).click();
 
         Assert.assertTrue("Avatar is not present",
                 isAvatarPresent());
