@@ -9,13 +9,13 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends ParentPage {
     HomePage homePage;
 
-    @FindBy(name = "_username")
+    @FindBy(name = "login")
     private WebElement userNameInput;
 
     @FindBy(id = "password")
     private WebElement passwordInput;
 
-    @FindBy(tagName = "button")
+    @FindBy(xpath = ".//label")
     private WebElement submitButton;
 
     public LoginPage(WebDriver webDriver) {
