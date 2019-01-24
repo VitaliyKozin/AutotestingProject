@@ -12,7 +12,7 @@ public class LoginPage extends ParentPage {
     @FindBy(name = "login")
     private WebElement userNameInput;
 
-    @FindBy(id = "password")
+    @FindBy(name = "password")
     private WebElement passwordInput;
 
     @FindBy(xpath = ".//label")
