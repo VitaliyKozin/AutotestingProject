@@ -37,7 +37,7 @@ public class LoginTestWithOutPageObject {
 
         webDriver.findElement(By.xpath(".//button[@class='ant-btn sc-csuQGl bRwNtx ant-btn-primary']")).click();
 
-        Assert.assertTrue("Avatar is not present",
+       Assert.assertTrue("Avatar is not present",
                 isAvatarPresent());
     }
 
@@ -46,7 +46,7 @@ public class LoginTestWithOutPageObject {
         webDriver.quit();
     }
 
-    private boolean isAvatarPresent(){
+   private boolean isAvatarPresent(){
         try {
             return webDriver.findElement(
                     By.xpath(".//*[@class='sc-jlyJG ipjaKa']"))
