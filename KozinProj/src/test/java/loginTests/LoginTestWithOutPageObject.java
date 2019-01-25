@@ -42,9 +42,9 @@ public class LoginTestWithOutPageObject {
     }
 
     @After
-   /* public void tearDown(){
+    public void tearDown(){
         webDriver.quit();
-    }*/
+    }
 
     private boolean isAvatarPresent(){
         try {
