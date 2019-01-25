@@ -50,6 +50,8 @@ public class LoginPage extends ParentPage {
         public void clickOnSubmitButton (){
             actionsWithOurElements.clickOnElement(submitButton);
         }
+        @Step
+        public void clickOnSubmitEnter() { actionsWithOurElements.clickOnElement(submitEnter);}
 
         /**
          * Method valid Login
@@ -62,6 +64,7 @@ public class LoginPage extends ParentPage {
             enterLogin(login);
             enterPass(passWord);
             clickOnSubmitButton();
+            clickOnSubmitEnter();
             homePage.checkCurrentUrl();
             homePage.isAvatarPresent();
         }
