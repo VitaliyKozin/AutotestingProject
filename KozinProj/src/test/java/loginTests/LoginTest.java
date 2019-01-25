@@ -11,6 +11,7 @@ public class LoginTest extends ParentTest {
         loginPage.enterLogin("admin_test");
         loginPage.enterPass("admin_test");
         loginPage.clickOnSubmitButton();
+        loginPage.clickOnSubmitEnter();
 
         checkAC("Avatar is not present", homePage.isAvatarPresent(), true);
     }
@@ -21,7 +22,7 @@ public class LoginTest extends ParentTest {
         loginPage.enterLogin("Student");
         loginPage.enterPass("90");
         loginPage.clickOnSubmitButton();
-
+        loginPage.clickOnSubmitEnter();
         checkAC("Submit button is not present", homePage.isSubmitButtonPresent(), true);
         checkAC("Avatar is present", homePage.isAvatarPresent(), false);
     }
