@@ -17,6 +17,10 @@ public class LoginPage extends ParentPage {
 
     @FindBy(xpath = ".//label")
     private WebElement submitButton;
+    /* @FindBy(xpath = ".//*[@class='pull-left image']//img[@class='img-circle']")
+    private WebElement avatar; */
+    @FindBy(xpath = ".//*[@class='ant-btn sc-csuQGl bRwNtx ant-btn-primary']")
+    private WebElement submitEnter;
 
     public LoginPage(WebDriver webDriver) {
         super(webDriver, "/login");

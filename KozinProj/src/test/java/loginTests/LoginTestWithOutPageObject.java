@@ -34,6 +34,7 @@ public class LoginTestWithOutPageObject {
         webDriver.findElement(By.name("password")).sendKeys("admin_test");
 
         webDriver.findElement(By.xpath(".//label")).click();
+
         webDriver.findElement(By.xpath(".//button[@class='ant-btn sc-csuQGl bRwNtx ant-btn-primary']")).click();
 
         Assert.assertTrue("Avatar is not present",
