@@ -49,7 +49,7 @@ public class LoginTestWithOutPageObject {
    private boolean isAvatarPresent(){
         try {
             return webDriver.findElement(
-                    By.xpath(".//*[@class='sc-jlyJG ipjaKa']"))
+                    By.xpath(".//a[@href='/search']"))
                     .isDisplayed();
         } catch (Exception e){
                 return false;

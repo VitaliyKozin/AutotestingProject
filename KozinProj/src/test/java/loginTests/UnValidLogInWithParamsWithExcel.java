@@ -36,7 +36,7 @@ public class UnValidLogInWithParamsWithExcel extends ParentTest {
         loginPage.enterLogin(login);
         loginPage.enterPass(pass);
         loginPage.clickOnSubmitButton();
-
+        loginPage.clickOnSubmitEnter();
         checkAC("Avatar was not expected", homePage.isAvatarPresent(), false);
     }
 }

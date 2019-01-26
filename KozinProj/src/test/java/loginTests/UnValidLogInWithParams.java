@@ -20,8 +20,8 @@ public class UnValidLogInWithParams extends ParentTest {
     @Parameterized.Parameters (name = "Parameters are {0} and {1}")
     public static Collection testData() {
         return Arrays.asList(new Object[][] {
-                {"admin_test", "admin_test"},
-                {"admin_test", "admin_test"}
+                {"admin_test_false1", "admin_test"},
+                {"admin_test_false2", "admin_test"}
         });
     }
 
@@ -31,6 +31,7 @@ public class UnValidLogInWithParams extends ParentTest {
         loginPage.enterLogin(login);
         loginPage.enterPass(pass);
         loginPage.clickOnSubmitButton();
+        loginPage.clickOnSubmitEnter();
 
         checkAC("Avatar was not expected", homePage.isAvatarPresent(), false);
     }
