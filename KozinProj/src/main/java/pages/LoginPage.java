@@ -9,14 +9,18 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends ParentPage {
     HomePage homePage;
 
-    @FindBy(name = "_username")
+    @FindBy(name = "login")
     private WebElement userNameInput;
 
-    @FindBy(id = "password")
+    @FindBy(name = "password")
     private WebElement passwordInput;
 
-    @FindBy(tagName = "button")
+    @FindBy(xpath = ".//label")
     private WebElement submitButton;
+    /* @FindBy(xpath = ".//*[@class='pull-left image']//img[@class='img-circle']")
+    private WebElement avatar; */
+    @FindBy(xpath = ".//*[@class='ant-btn sc-csuQGl bRwNtx ant-btn-primary']")
+    private WebElement submitEnter;
 
     public LoginPage(WebDriver webDriver) {
         super(webDriver, "/login");
@@ -46,6 +50,8 @@ public class LoginPage extends ParentPage {
         public void clickOnSubmitButton (){
             actionsWithOurElements.clickOnElement(submitButton);
         }
+        @Step
+        public void clickOnSubmitEnter() { actionsWithOurElements.clickOnElement(submitEnter);}
 
         /**
          * Method valid Login
@@ -58,6 +64,7 @@ public class LoginPage extends ParentPage {
             enterLogin(login);
             enterPass(passWord);
             clickOnSubmitButton();
+            clickOnSubmitEnter();
             homePage.checkCurrentUrl();
             homePage.isAvatarPresent();
         }

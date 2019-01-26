@@ -25,17 +25,19 @@ public class LoginTestWithOutPageObject {
     public void validLogIn(){
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        webDriver.get("http://v3.test.itpmgroup.com");
+        webDriver.get("https://eap.gioc.kiev.ua");
 
-        webDriver.findElement(By.name("_username")).clear();
-        webDriver.findElement(By.name("_username")).sendKeys("Student");
+        webDriver.findElement(By.name("login")).clear();
+        webDriver.findElement(By.name("login")).sendKeys("admin_test");
 
-        webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys("909090");
+        webDriver.findElement(By.name("password")).clear();
+        webDriver.findElement(By.name("password")).sendKeys("admin_test");
 
-        webDriver.findElement(By.tagName("button")).click();
+        webDriver.findElement(By.xpath(".//label")).click();
 
-        Assert.assertTrue("Avatar is not present",
+        webDriver.findElement(By.xpath(".//button[@class='ant-btn sc-csuQGl bRwNtx ant-btn-primary']")).click();
+
+       Assert.assertTrue("Avatar is not present",
                 isAvatarPresent());
     }
 
@@ -44,10 +46,10 @@ public class LoginTestWithOutPageObject {
         webDriver.quit();
     }
 
-    private boolean isAvatarPresent(){
+   private boolean isAvatarPresent(){
         try {
             return webDriver.findElement(
-                    By.xpath(".//*[@class='pull-left image']//img[@class='img-circle']"))
+                    By.xpath(".//a[@href='/search']"))
                     .isDisplayed();
         } catch (Exception e){
                 return false;

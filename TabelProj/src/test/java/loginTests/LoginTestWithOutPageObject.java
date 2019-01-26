@@ -26,7 +26,7 @@ public class LoginTestWithOutPageObject {
     public void validLogIn() {
         webDriver.manage().window().maximize();  // драйвер сделай окошко максимальтым
         webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);  //implicitlyWait - неявное ожидание  / 30 - секунд
-        webDriver.get("http://v3.test.itpmgroup.com");  //открой нам этот...
+        webDriver.get("http://v3.test.itpmgroup.com");  //открой нам этот Урл...
 
         webDriver.findElement(By.name("_username")).clear();
         webDriver.findElement(By.name("_username")).sendKeys("Student");
