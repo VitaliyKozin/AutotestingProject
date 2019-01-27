@@ -28,10 +28,10 @@ public class LoginTestWithOutPageObject {
         webDriver.get("https://eap.gioc.kiev.ua");
 
         webDriver.findElement(By.name("login")).clear();
-        webDriver.findElement(By.name("login")).sendKeys("admin_test");
+        webDriver.findElement(By.name("login")).sendKeys("administrator_test");
 
         webDriver.findElement(By.name("password")).clear();
-        webDriver.findElement(By.name("password")).sendKeys("admin_test");
+        webDriver.findElement(By.name("password")).sendKeys("administrator_test");
 
         webDriver.findElement(By.xpath(".//label")).click();
 
